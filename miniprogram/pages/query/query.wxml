@@ -1,0 +1,2 @@
+<button bindtap="add" class="uploader">新增地点</button>
+<button bindtap="query" class="uploader">地点查询</button>
