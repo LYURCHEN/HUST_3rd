@@ -1,8 +1,8 @@
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!userInfo.openid}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
-    <block>
-      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
-    </block>
-  </view>
+<view class="login">
+<!-- 登录 -->
+  <button wx:if="{{!userInfo.openid}}" open-type="getUserInfo" type='primary' bindgetuserinfo="getUserInfo">登录</button>
+  <block>
+    <image hidden="{{!userInfo.openid}}" class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+  </block>
+  
 </view>

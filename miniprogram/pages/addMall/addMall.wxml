@@ -1,0 +1,76 @@
+<!--商品发布-->
+<form bindsubmit="formSubmit">
+  
+  <!--商品名称-->
+  <view class='title'>
+    <view class='title_text'>
+      <text>名称</text>
+      <input name="title" type='text' value='{{title}}' bindblur='getTitle'></input>
+    </view>
+  </view>
+
+  <!--商品价格-->
+  <view class='title'>
+    <view class='title_text'>
+      <text>价格</text>
+      <input name="price" type='digit' value='{{price}}' bindblur='getPrice'></input>
+    </view>
+  </view>
+
+  <!--商品描述-->
+
+  <!-- 考虑以后改为文本框 -->
+
+
+  <view class='info-point'>
+    <view class='title_text'>
+      <text>简短描述</text>
+      <textarea name="info" class='textarea' value='{{info}}' bindblur='getInfo'></textarea>
+    </view>
+  </view>
+   
+  <!--商品类别-->
+  <view class='title'>
+    <view class='title_text'>
+      <text>选择类别</text>
+      <picker name="category"  range="{{categoryList}}"  value="{{categoryInd}}" bindchange="getCategory">
+        <view class='roll_text'>{{categoryList[categoryInd]}}></view>
+      </picker>
+    </view>
+  </view>
+  
+  <!--上传图片-->
+  <view class='upImv'>
+    <view class='upImv_text'>上传主页图片</view>
+    <view class="addImv">
+      <!--这个是已经选好的图片-->
+      <view wx:if="{{banner}}"  class="upFile" bindtap="showImageBanner" style="border-radius: 5px">
+        <image class="itemImv" src="{{banner}}"></image>
+        <image class="closeImv" src="/images/deleteImage.png" mode="scaleToFill" catchtap="deleteImvBanner" data-id="{{index}}"></image>
+      </view>
+ 
+      <!--这个是选择图片-->
+      <view class="chooseView" bindtap="chooseBanner" style="border-radius: 5px" wx:if="{{!banner}}">
+        <image class="chooseImv" src="/images/addImage.png"></image>
+      </view>
+    </view>
+ 
+    <view class='upImv_text'>上传详情图片</view>
+    <view class="addImv">
+      <!--这个是已经选好的图片-->
+      <view wx:for="{{detail}}" wx:key="key" class="upFile" data-id="{{index}}" bindtap="showImageDetail" style="border-radius: 5px">
+        <image class="itemImv" src="{{item}}"></image>
+        <image class="closeImv" src="/images/deleteImage.png" mode="scaleToFill" catchtap="deleteImvDetail" data-id="{{index}}"></image>
+      </view>
+ 
+      <!--这个是选择图片-->
+      <view class="chooseView" bindtap="chooseDetail" wx:if="{{detail.length<3}}">
+        <image class="chooseImv" src="/images/addImage.png"></image>
+      </view>
+    </view> 
+  </view>
+  <button hidden="{{!userInfo.openid}}" form-type='submit' class='sureRelease'>确认发布</button>
+  <!-- <view > -->
+  <navigator class="navigator-text" wx:if="{{!userInfo.openid}}" open-type="switchTab" url="/pages/me/me">登录后才可以发布哦^^ </navigator>
+  <!-- </view> -->
+</form>

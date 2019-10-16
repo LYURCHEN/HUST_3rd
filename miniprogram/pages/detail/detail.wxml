@@ -1,4 +1,12 @@
-<view>
-<text>详情页面</text>
-<text>{{id}}</text>
+<view class="container">
+<swiper indicator-dots="true" indicator-active-color="#EA5149" autoplay="true" interval="3500" circular="true" class="swiper">
+    <block >
+      <swiper-item wx:for="{{info.detailImage}}" wx:key="{{item}}">
+        <image src="{{item}}" mode='aspectFit' class="slide-image"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+<view>详情页面</view>
+<view>{{info.title}}</view>
+<view>￥{{info.price}}</view>
 </view>

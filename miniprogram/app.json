@@ -1,31 +1,22 @@
 {
   "pages": [
+    "pages/addMall/addMall",
     "pages/index/index",
     "pages/cart/cart",
     "pages/logs/logs",
     "pages/me/me",
     "pages/detail/detail",
-    "pages/userConsole/userConsole",
-    "pages/storageConsole/storageConsole",
-    "pages/databaseGuide/databaseGuide",
-    "pages/addFunction/addFunction",
-    "pages/deployFunctions/deployFunctions",
-    "pages/chooseLib/chooseLib",
-    "pages/openapi/openapi",
-    "pages/openapi/serverapi/serverapi",
-    "pages/openapi/callback/callback",
-    "pages/openapi/cloudid/cloudid",
-    "pages/im/im",
-    "pages/im/room/room",
     "pages/query/query",
+    "pages/test/test",
     "pages/login/login"
+    
   ],
 
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTitleText": "闲置品流通平台",
     "navigationBarTextStyle": "black"
   },
 
@@ -39,14 +30,14 @@
         "selectedIconPath": "/images/selected-index.png"
       },
       {
-        "pagePath": "pages/cart/cart",
-        "text": "购物车",
-        "iconPath": "/images/cart.png",
-        "selectedIconPath": "/images/selected-cart.png"
+        "pagePath": "pages/addMall/addMall",
+        "text": "发布",
+        "iconPath": "/images/addMall.png",
+        "selectedIconPath": "/images/selected-addMall.png"
       },
       {
         "pagePath": "pages/me/me",
-        "text": "我",
+        "text": "我的",
         "iconPath": "/images/me.png",
         "selectedIconPath": "/images/selected-me.png"
       }

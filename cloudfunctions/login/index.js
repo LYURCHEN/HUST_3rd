@@ -26,7 +26,6 @@ exports.main = (event, context) => {
   const wxContext = cloud.getWXContext()
 
   return {
-    sum: event.a + event.b,  //加法
     wxContext
   }
 }

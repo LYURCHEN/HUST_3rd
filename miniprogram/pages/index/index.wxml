@@ -1,34 +1,26 @@
 <!--index.wxml-->
 <view class="container">
-  
-  <!-- <image src="cloud://idle-product-cyhz4.6964-idle-product-cyhz4-1300201119/commodity-image-ilBaRgkE8bRq31babfebfd2bd4287565c50d7d9d7052"></image> -->
-
-  <!-- 登录 -->
-  <!-- <view class="userinfo">
-    <button wx:if="{{!userInfo.openid}}" open-type="getUserInfo" type='primary' bindgetuserinfo="getUserInfo">登录</button>
-    <block>
-      <image hidden="{{!userInfo.openid}}" class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+  <swiper indicator-dots="true" indicator-active-color="#EA5149" autoplay="true" interval="3500" circular="true" class="swiper">
+    <block >
+      <swiper-item wx:for="{{tops}}" wx:key="{{item._id}}">
+        <image src="{{item.bannerImage}}" mode='aspectFit' class="slide-image"></image>
+      </swiper-item>
     </block>
-  </view> -->
-
-  <!-- 上架商品 -->
-  <!-- <view class='userinfo'>
-    <button bindtap="addMall" hidden="{{!userInfo.openid}}" type="primary">上架商品</button>
-  </view> -->
-
+  </swiper>
+  
   <!-- 获取商品 -->
   <!-- <view class="userInfo">
     <button bindtap="getMall" hidden="{{!userInfo.openid}}" type="primary">获取商品</button>
   </view> -->
   
-  <view wx:for="{{list}}" id="{{item._id}}" class="item-container" bindtap="toDetail">
+  <view wx:for="{{list}}" wx:key="{{item._id}}" id="{{item._id}}" class="item-container" bindtap="toDetail">
 
-    <image  class="image" src="{{item.image}}"></image>
+    <image lazy-load="true" class="image" src="{{item.bannerImage}}"></image>
 
     <view class="content">
 
-      <view class="title">{{item.title}}</view>
-      <view class="tag" wx:for="{{item.tags}}"><text>{{item}}</text> </view>
+      <view class="title">{{item.title}} : {{item.click}}</view>
+      <view class="tag"><text>{{item.category}}</text> </view>
       
     </view>
 
@@ -38,10 +30,8 @@
       </view>
       <view class="cart">
       +
-
       </view>
     </view>
-
   </view>
 
 
