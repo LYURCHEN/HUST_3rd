@@ -1,0 +1,6 @@
+<input class='input-mail' name='email' type='text' placeholder='请输入学校邮箱' bindinput="emailInput"></input>
+<view class='confirmstype'>
+<input class='input-verify' name='confirm' type='text'  placeholer='请输入验证码' bindinput="codeInput"></input>
+<button class='verify-btn' disabled='{{disabled}}' bindtap="getVerificationCode">{{time}}</button>
+</view>
+<button class='confirm-btn' bindtap='confirm_btn'>开始认证</button>

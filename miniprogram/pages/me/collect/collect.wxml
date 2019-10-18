@@ -1,0 +1,21 @@
+<!--pages/me/collect/collect.wxml-->
+<view class="container">
+  <view class="list" wx:if='{{collectList.length}}'>
+    <view class="item" bindtap="openGoods" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:for="{{collectList}}" wx:key="{{item.id}}" data-index="{{index}}">
+      <image class="img" src="{{item.primaryPicUrl}}" mode='aspectFill'></image>
+      <view class="info">
+        <view class="name">{{item.name}}</view>
+        <view class="flex">
+          <view class="price">￥{{item.price}}</view>
+          <view class="tag" wx:if='{{!item.isSelling}}'>已出售</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="result-empty" wx:else>
+    <image class="icon" src="https://i.postimg.cc/VLsTt8WK/image.png"></image>
+    <text class="text">您还没有收藏宝贝</text>
+  </view>
+
+</view>

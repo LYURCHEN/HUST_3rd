@@ -1,5 +1,21 @@
 <!--index.wxml-->
+
+<!-- 回到顶部待实现 -->
+
+<!-- 懒加载未设置不循环 -->
+
 <view class="container">
+  <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+            <!-- 搜索框 -->
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="请输入商品名称" bindblur="getSearch"/>
+                </view>
+            </view>
+            <!-- 搜索按钮,调用搜索查询方法 -->
+            <view class="weui-search-bar__cancel-btn" bindtap='toSearch'>搜索</view>
+  </view>
   <swiper indicator-dots="true" indicator-active-color="#EA5149" autoplay="true" interval="3500" circular="true" class="swiper">
     <block >
       <swiper-item wx:for="{{tops}}" wx:key="{{item._id}}">
@@ -7,19 +23,14 @@
       </swiper-item>
     </block>
   </swiper>
-  
-  <!-- 获取商品 -->
-  <!-- <view class="userInfo">
-    <button bindtap="getMall" hidden="{{!userInfo.openid}}" type="primary">获取商品</button>
-  </view> -->
-  
+ 
   <view wx:for="{{list}}" wx:key="{{item._id}}" id="{{item._id}}" class="item-container" bindtap="toDetail">
 
-    <image lazy-load="true" class="image" src="{{item.bannerImage}}"></image>
+    <image lazy-load="true" class="image"  mode='aspectFit' src="{{item.bannerImage}}"></image>
 
     <view class="content">
 
-      <view class="title">{{item.title}} : {{item.click}}</view>
+      <view class="title">{{item.title}}</view>
       <view class="tag"><text>{{item.category}}</text> </view>
       
     </view>

@@ -1,0 +1,32 @@
+input{
+  padding-left: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 95%;
+  margin: 0 auto;
+  font-size: 28rpx;
+}
+.input-verify{
+  width: 67%;
+  margin-left: 10rpx;
+  float: left;
+  font-size: 28rpx;
+}
+.verify-btn{
+  width: 26%;
+  height: 65rpx;
+  float: right;
+  line-height: 65rpx;
+  background: #fff;    
+  color: #5FD79D;
+  margin: 20rpx 10rpx;
+  font-size: 28rpx;
+}
+.confirm-btn{
+  width: 80%;
+  height: 90rpx;
+  margin: 150rpx auto;
+  background: #5FD79D;    
+  color: #fff;
+}

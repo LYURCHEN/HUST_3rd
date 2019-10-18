@@ -6,7 +6,7 @@
       </swiper-item>
     </block>
   </swiper>
-<view>详情页面</view>
-<view>{{info.title}}</view>
-<view>￥{{info.price}}</view>
+<view style="font-weight:bold">{{info.title}}       ￥{{info.price}}</view>
+<view>被浏览{{info.clicks}}次</view>
+<view>{{info.description}}</view>
 </view>

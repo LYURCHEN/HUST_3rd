@@ -1,0 +1,20 @@
+<!--pages/me/posted/posted.wxml删除按钮未完成-->
+<view class="container">
+  <view class="list" wx:if='{{postedList.length}}'>
+    <view class="item" bindtap="openGoods" wx:for="{{postedList}}" wx:key="{{item-id}}" data-index="{{index}}" >
+      <image class="img" src="{{item.primaryPicUrl}}" mode="aspectFill"></image>
+      <view class="info">
+        <view class="name">{{item.name}}</view>
+        <view class="flex">
+          <view class="price">￥{{item.price}}</view>
+          <view class="delete" bindtap="deleteGood">删除</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="result-empty" wx:else>
+    <image class="icon" src="https://i.postimg.cc/15pDHhCq/image.png"></image>
+    <text class="text">您还没有发布过宝贝</text>
+  </view>
+</view>

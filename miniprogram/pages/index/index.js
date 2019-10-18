@@ -12,7 +12,8 @@ Page({
     // takeSession: false,
     // requestResult: '',
     list:[],
-    tops:[]
+    tops:[],
+    search:null
   },
   
   //获取热门商品
@@ -37,11 +38,11 @@ Page({
     this.getList()
   },
 
-  redirectToDetail(event,x){
-    wx.navigator({
-      url: "/pages/detail/detail?id=" + event.currentTarget.id,
-    })
-  },
+  // redirectToDetail(event,x){
+  //   wx.navigator({
+  //     url: "/pages/detail/detail?id=" + event.currentTarget.id,
+  //   })
+  // },
 
   //跳转到详情页
   toDetail(e){
@@ -54,7 +55,7 @@ Page({
 
   //下拉获取新商品
   getList(isInit){
-    //每次获取5页
+    //每次获取1页
     const PAGE = 5
     wx.showLoading({
       title: '加载中',
@@ -73,20 +74,25 @@ Page({
           })
           wx.stopPullDownRefresh()
         }
+        console.log(res.data)
         wx.hideLoading()
       }
     })
   },
   
   
-  // //获取商品
-  // getMall:function(){
-  //   db.collection("emall").get({
-  //     success: res=>{
-  //       console.log(res)
-  //     }
-  //   })
-  // },
+  getSearch(e){
+    this.setData({
+      search:e.detail.value
+    })
+    //console.log(e)    
+  },
+
+  toSearch(){
+    wx.navigateTo({
+      url: '/pages/search/search?search='+ this.data.search,
+    })
+  },
   
   onLoad: function(){
     wx.showLoading({
@@ -96,15 +102,6 @@ Page({
     this.getList("true")
     console.log(this.data.list)
     wx.hideLoading()
-    // db.collection("emall").get({
-    //   success: res=>{
-    //     this.setData({
-    //       list: res.data
-    //     })
-    //     console.log(res)
-    //     wx.hideLoading()
-    //   }
-    //})
     this.getTop()
     console.log(this.data.tops)
   }

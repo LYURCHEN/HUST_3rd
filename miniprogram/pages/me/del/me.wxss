@@ -1,0 +1,15 @@
+.userinfo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 140rpx;
+}
+
+.login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}

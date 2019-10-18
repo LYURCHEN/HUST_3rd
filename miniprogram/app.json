@@ -1,15 +1,16 @@
 {
   "pages": [
-    "pages/addMall/addMall",
+    "pages/me/info/info",
     "pages/index/index",
+    "pages/addMall/addMall",
     "pages/cart/cart",
     "pages/logs/logs",
     "pages/me/me",
     "pages/detail/detail",
-    "pages/query/query",
     "pages/test/test",
-    "pages/login/login"
-    
+    "pages/login/login",
+    "pages/confirm/confirm",
+    "pages/search/search"
   ],
 
   "window": {

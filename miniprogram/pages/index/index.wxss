@@ -28,7 +28,7 @@ page {
 
 .item-container{
   display: flex;
-  margin-top: 400rpx
+  margin-top: 50rpx
 }
 
 .image{
@@ -52,7 +52,7 @@ page {
 }
 
 .tag{
-  width: 80rpx;
+  width: 120rpx;
   padding: 0 0rpx;
   background: #EA5149;
   border-radius: 20%;
@@ -71,7 +71,8 @@ page {
 }
 
 .swiper{
-  width:100%
+  width:100%;
+  margin:50rpx;
 }
 
 .slide-image{
@@ -97,14 +98,48 @@ page {
   border: none;
 }
 
-.userinfo-nickname {
-  font-size: 32rpx;
-  color: #007aff;
-  background-color: white;
-  background-size: cover;
+.weui-search-bar {
+  position: relative;
+  padding: 8px 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  background-color: #EFEFF4;
+  border-top: 1rpx solid #D7D6DC;
+  border-bottom: 1rpx solid #D7D6DC;
 }
-
-.userinfo-nickname::after {
-  border: none;
+.weui-icon-search_in-box {
+  position: absolute;
+  left: 10px;
+  top: 7px;
+}
+.weui-search-bar__form {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+          flex: auto;
+  border-radius: 5px;
+  background: #FFFFFF;
+  border: 1rpx solid #E6E6EA;
+}
+.weui-search-bar__box {
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.weui-search-bar__input {
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+}
+.weui-search-bar__cancel-btn {
+  margin-left: 10px;
+  line-height: 28px;
+  color: rgb(46, 42, 43);
+  white-space: nowrap;
 }
 
