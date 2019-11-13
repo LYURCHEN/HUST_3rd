@@ -1,12 +1,32 @@
 <view class="container">
 <swiper indicator-dots="true" indicator-active-color="#EA5149" autoplay="true" interval="3500" circular="true" class="swiper">
     <block >
-      <swiper-item wx:for="{{info.detailImage}}" wx:key="{{item}}">
+      <swiper-item wx:for="{{info.detailImage}}" wx:key="{{item._id}}">
         <image src="{{item}}" mode='aspectFit' class="slide-image"></image>
       </swiper-item>
     </block>
   </swiper>
-<view style="font-weight:bold">{{info.title}}       ￥{{info.price}}</view>
-<view>被浏览{{info.clicks}}次</view>
-<view>{{info.description}}</view>
+</view>
+<view class='jiange'></view>
+<view class='detail'>
+<view class='titlebox'>
+<view class='title'>【{{info.title}}】</view>
+<view class='price'>￥{{info.price}}</view>
+</view>
+<view class='description'>{{info.description}}</view>
+<view class='tagbox'>
+<view class='tag'>{{info.category}}</view>
+</view>
+<view class='divline'></view>
+<view class='address'>{{info.address}}</view>
+</view>
+
+
+<view class='clicks'>被浏览{{info.clicks}}次</view>
+
+<view class='buttom'>
+<view class='img'>
+<image  src='{{favorimg}}' bindtap="addFavorite" data-id="{{info.id}}"></image>
+</view>
+<view id="{{info.userID}}" bindtap="toWxid" class='getID'>获取微信ID</view>
 </view>

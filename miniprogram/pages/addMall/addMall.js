@@ -21,11 +21,22 @@ Page({
     banner:null, //主页图片
     bannerImage:null,
     detail: [], //详情图片
-    detailImages:[]
+    detailImages:[],
+    address:null
   },
 
   //生命周期函数--监听页面加载
   onLoad: function (options) {
+    var that = this;
+    //获取用户地址
+    db.collection("user").doc(app.globalData.userInfo.openid).get({
+      success:res=>{
+        console.log(res.data)
+        that.setData({
+          address:res.data.address
+        })
+      }
+    })
   },
 
   onShow: function () {
@@ -205,9 +216,7 @@ Page({
         userID: d.userInfo.openid,
         bannerImage: d.bannerImage,
         detailImage: d.detailImages,
-
-        //还应添加发布者地址 
-
+        address: d.address
       }
       db.collection("emall").add({
         data: data,

@@ -1,0 +1,20 @@
+<view class="container">
+  <view class='userinfo'>
+      <image  class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+      <text>{{useInfo.nickName}}</text>
+  </view>
+  
+  
+  <view class='title_text'>
+    <text>修改我的微信号</text>
+    <input type="text" class="weui-search-bar__input" placeholder="{{user.wxID}}" bindblur="getWxID"/>
+  
+  </view>
+  <view class='title_text'>
+    <text>修改我的地址</text>
+    <input type="text" class="weui-search-bar__input" placeholder="{{user.address}}" bindblur="getAdd"/>
+     
+  </view>
+
+  <button type='warn' bindtap="alter">确认修改</button>
+</view>

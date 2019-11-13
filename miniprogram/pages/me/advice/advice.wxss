@@ -1,1 +1,11 @@
 /* pages/me/advice/advice.wxss */
+.advice{
+  height: 100%;
+  color: #fff;
+
+}
+
+
+.code{
+  
+}

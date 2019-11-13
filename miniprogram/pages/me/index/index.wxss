@@ -1,0 +1,45 @@
+button::after {border: none;width: auto;}
+input{outline: none;border: none;list-style: none;width: auto;}
+.list_item{float: left;}
+.ym_hide{display: none;}
+.ym_show{display: block;}
+.slide-image {  width: 100%;  height:100%;}
+ .page_menolgn_1{width:748rpx;height:1179rpx;padding:0rpx;clear:both;float:left;text-align:left; border-radius:0rpx;font-size:22rpx;}
+ .userinfo{
+  width: 100%;
+  height: 280rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 30.25rpx;
+  background: rgb(235, 68, 90);
+}
+
+.userinfo .avatar {
+  height: 148rpx;
+  width: 148rpx;
+  border-radius: 50%;
+  border-color: #fff;
+
+}
+.userinfo .name {
+  display: block;
+  height: 45rpx;
+  line-height: 45rpx;
+  color: #fff;
+  font-size: 37.5rpx;
+  margin-bottom: 10rpx;
+}
+
+.userinfo .text{
+  color: #fff;
+  font-display: flex;
+  font-size: 25rpx;
+}
+ .page_menolgn_1 .page_menolgn_7{width:748rpx;position: relative;height:731rpx;padding:0rpx;clear:both;margin-top:3rpx;margin-left:0rpx;float:left;background-color:#f2f4f2;background-image: url(http://wx.ymznkf.com/project/8489/云开发2//miniprogram/page_menolgn/images/page_menolgn_7_7.jpg);background-size:cover;text-align:left; border-radius:0rpx;font-size:22rpx; line-height:731rpx;}
+ .page_menolgn_1 .page_menolgn_7 .page_menolgn_8{width:155rpx;height:211rpx;padding:0rpx;margin-top:58rpx;margin-left:120rpx;float:left;position: absolute;top: 0rpx;left: 0rpx;text-align:left; border-radius:0rpx;font-size:22rpx; line-height:211rpx;}
+ .page_menolgn_1 .page_menolgn_7 .page_menolgn_11{width:155rpx;height:208rpx;padding:0rpx;margin-top:361rpx;margin-left:123rpx;float:left;position: absolute;top: 0rpx;left: 0rpx;text-align:left; border-radius:0rpx;font-size:22rpx; line-height:208rpx;}
+ .page_menolgn_1 .page_menolgn_7 .page_menolgn_12{width:161rpx;height:208rpx;padding:0rpx;margin-top:361rpx;margin-left:461rpx;float:left;position: absolute;top: 0rpx;left: 0rpx;text-align:left; border-radius:0rpx;font-size:22rpx; line-height:208rpx;}
+ .page_menolgn_1 .page_menolgn_7 .page_menolgn_9{width:157rpx;height:211rpx;padding:0rpx;margin-top:58rpx;margin-left:465rpx;float:left;position: absolute;top: 0rpx;left: 0rpx;text-align:left; border-radius:0rpx;font-size:22rpx; line-height:211rpx;}
+ .page_menolgn_1 .page_menolgn_14{width:748rpx;height:110rpx;padding:0rpx;clear:both;margin-top:0rpx;margin-left:0rpx;float:left;text-align:left; border-radius:0rpx;font-size:106rpx; line-height:110rpx;}

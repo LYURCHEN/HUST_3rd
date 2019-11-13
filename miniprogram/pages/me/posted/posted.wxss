@@ -1,0 +1,116 @@
+/* pages/me/posted/posted.wxss */
+
+page {
+  background: #fafaf8;
+}
+
+.container{
+  background: #f4f4f4;
+  min-height: 100%;
+}
+
+
+.header image{
+  width: 28px;
+  height: 28px;
+}
+
+.cartList{
+  display: flex;
+  flex-direction: column;
+}
+
+.space {
+  font-size: 18px;
+  color: #db2929;
+  padding: 10px;
+}
+
+.goods {
+  width: 95%;
+  background: #fff;
+  margin-bottom: 10rpx;
+  padding: 5rpx 5rpx 0rpx 5rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-style:groove;
+  border-width: 5rpx;
+  border-color: 	#FF0000;
+  border-radius: 3%;
+}
+
+.goods image {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ddd;
+}
+
+.goods .good-cont {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #000;
+  font-size: 14px;
+  padding: 0px;
+  height: 100px;
+}
+
+.goods .good-cont .goods-navigator {
+  display: flex;
+  flex: 2;
+}
+
+.goods .good-cont .tag{
+  width: 120rpx;
+  padding: 0 0rpx;
+  background: 	#FF0000;
+  border-radius: 0%;
+  margin: 10rpx;
+  color: white;
+  font-size: 28rpx; 
+  flex: center;
+}
+
+.goods .good-cont .good-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: 3;
+  margin-top: 15px;
+}
+
+.goods .good-cont .good-price .price {
+  font-size: 16px;
+  color: 	#FF0000;
+}
+
+.goods .good-cont .good-price .btn-box image {
+  width: 28px;
+  height: 28px;
+  border: 0;
+  margin: 0;
+}
+.result.empty{
+  width: 100%;
+  height: 100%;
+  padding-top: 300rpx;
+}
+
+.result.empty.icon{
+  margin:0 auto;
+  display: block;
+  width: 240rpx;
+  height: 240rpx;
+}
+
+.result.empty.text{
+  display: block;
+  width: 100%;
+  height: 40rpx;
+  font-size: 28rpx;
+  text-align: center;
+  color: #000;
+}

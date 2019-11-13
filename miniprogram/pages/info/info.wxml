@@ -1,0 +1,44 @@
+<!--pages/info/info.wxml-->
+<view class="container">
+
+    <view class='userinfo'>
+      <image  class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+      <text>{{useInfo.nickName}}</text>
+    </view>
+
+
+<view class='title'> 
+  <view class='title_text'>
+    <text>修改我的微信号：</text>
+    <input type="text" class="weui-search-bar__input" placeholder="{{user.wxID}}" bindblur="getWxID"/>
+  </view>
+</view>
+
+<view class='title'>
+  <view class='title_text'>
+    <text>修改我的地址：</text>
+    <input type="text" class="weui-search-bar__input" placeholder="{{user.address}}" bindblur="getAdd"/>   
+  </view>
+</view>
+
+
+
+  <!--身份验证-->
+  <view class='title'>
+    <view class='title_text' wx:if="{{!isLogin}}">
+    <navigator url="/pages/confirm/confirm">
+      <view>
+       <text>身份验证->未认证</text>    
+      </view>
+    </navigator>
+    </view>
+    <view class="title_text" wx:else>
+      <view>
+       <text>身份验证->已认证</text>   
+      </view>
+    </view>
+  </view>
+
+
+<button type='warn' bindtap="alter">确认修改</button>
+</view>

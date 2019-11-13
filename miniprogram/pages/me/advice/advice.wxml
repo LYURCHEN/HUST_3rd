@@ -1,2 +1,4 @@
 <!--pages/me/advice/advice.wxml-->
-<text>pages/me/advice/advice.wxml</text>
+<view class="advice">
+<image class="code" src="/images/code.png"></image>
+</view>

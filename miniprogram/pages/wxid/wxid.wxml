@@ -1,0 +1,8 @@
+<!--pages/wxid/wxid.wxml-->
+<view hidden="{{!wxid}}">
+<view class="text">偷偷告诉你Ta的微信号是</view>
+<view class="wxid">{{wxid}}</view>
+<view class="text">千万不要告诉别人哦</view>
+</view>
+<view wx:if="{{!wxid}}" class="text">这个家伙竟然连微信号都没有留
+</view>

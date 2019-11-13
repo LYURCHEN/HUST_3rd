@@ -2,11 +2,109 @@
   width:100%
 }
 
-.title-text{
-  font-size: 28rpx 
-}
-
 .slide-image{
   width:750rpx;
   height:370rpx;
+}
+
+.jiange{
+  height: 30rpx;
+  background-color: rgb(231, 229, 229);
+}
+
+.detail{
+  box-shadow: 0rpx 4rpx 4rpx 4rpx rgb(231, 229, 229);
+}
+
+.titlebox{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 20rpx;
+}
+
+.title{
+  font-size: 50rpx;
+}
+
+.price{
+  font-size: 50rpx;
+  color:red;
+}
+
+.description{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  font-size: 50rpx;
+}
+
+.tagbox{
+  margin-left: 20rpx;
+}
+
+.tag{
+  width: 150rpx;
+  padding: 0 0rpx;
+  background: 	#FF0000;
+  border-radius: 0%;
+  margin: 10rpx;
+  color: white;
+  font-size: 35rpx; 
+  flex: center;
+}
+
+.divline{
+  background-color: rgb(231, 229, 229);
+  width:100%;
+  height: 3rpx;
+}
+
+.address{
+  height: 50rpx;
+  margin-left: 25rpx;
+  font-size: 30rpx;
+  color:darkgrey;
+}
+
+.clicks{
+  margin-top: 60rpx;
+  padding-left: 25rpx;
+  height: 70rpx;
+  font-size: 30rpx;
+  color: darkgray;
+  line-height: 70rpx;
+  box-shadow: 4rpx 4rpx 4rpx 4rpx rgb(231, 229, 229);
+}
+
+.buttom{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  heigth: 100rpx;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.buttom .img{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50%;
+}
+
+.buttom image{
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.buttom .getID{
+  color: #fff; 
+  background: linear-gradient(to right, rgb(255, 102, 0) , rgb(255, 217, 0)); 
+  height: 100rpx;
+  width: 40%;
+  margin: 0; 
+  line-height: 100rpx;
+  border-radius: 0%;
 }

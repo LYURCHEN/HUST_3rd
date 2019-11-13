@@ -1,20 +1,47 @@
-<!--pages/me/posted/posted.wxml删除按钮未完成-->
-<view class="container">
-  <view class="list" wx:if='{{postedList.length}}'>
-    <view class="item" bindtap="openGoods" wx:for="{{postedList}}" wx:key="{{item-id}}" data-index="{{index}}" >
-      <image class="img" src="{{item.primaryPicUrl}}" mode="aspectFill"></image>
+<!--pages/me/posted/posted.wxml-->
+  <view class="postList" wx:if='{{postList.length}}'>
+    <!--保留区-->
+    <view class="space"></view>
+    <!--list item-->
+    <block wx:for="{{postList}}" wx:key="{{item-id}}">
+      <view class="goods">
+            <!--左侧图片-->
+            <view>
+                <image src="{{item.bannerImage}}" class="good-img"/>
+            </view>
+            <!--右侧说明部分-->
+            <view class="good-cont">
+                <!--文字说明-->
+                <view class="goods-navigator">
+                    <text class="good-name">{{item.title}}</text>
+                </view>
+                <!--种类说明-->
+                <view class="tag"><text>{{item.category}}</text> </view>
+                <!--价钱和删除图标-->
+                <view class="good-price">
+                    <text class="price">￥{{item.price}}</text>
+                    <view class="btn-box">
+                        <image id="{{item._id}}" src="/images/delete_4.png" bindtap="deleteGood"/>
+                    </view>
+                </view>
+            </view>
+      </view>
+    </block>
+  </view>
+  <!-- <view class="list" wx:if='{{postList.length}}'>
+    <view class="item" bindtap="openGoods" wx:for="{{postList}}" wx:key="{{item-id}}" data-index="{{index}}" >
+      <image class="img" src="{{item.bannerImage}}" mode="aspectFill"></image>
       <view class="info">
-        <view class="name">{{item.name}}</view>
+        <view class="name">{{item.title}}</view>
         <view class="flex">
           <view class="price">￥{{item.price}}</view>
-          <view class="delete" bindtap="deleteGood">删除</view>
+          <view class="delete" id="{{item._id}}" bindtap="deleteGood">删除</view>
         </view>
       </view>
     </view>
-  </view>
+  </view> -->
 
   <view class="result-empty" wx:else>
     <image class="icon" src="https://i.postimg.cc/15pDHhCq/image.png"></image>
     <text class="text">您还没有发布过宝贝</text>
   </view>
-</view>

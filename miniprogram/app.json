@@ -1,23 +1,21 @@
 {
   "pages": [
-    "pages/me/info/info",
     "pages/index/index",
+    "pages/search/search",
     "pages/addMall/addMall",
-    "pages/cart/cart",
-    "pages/logs/logs",
-    "pages/me/me",
+    "pages/me/index/index",
     "pages/detail/detail",
-    "pages/test/test",
     "pages/login/login",
-    "pages/confirm/confirm",
-    "pages/search/search"
+    "pages/info/info",
+    "pages/me/posted/posted",
+    "pages/wxid/wxid"
   ],
 
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "闲置品流通平台",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "HUST好货",
     "navigationBarTextStyle": "black"
   },
 
@@ -37,7 +35,7 @@
         "selectedIconPath": "/images/selected-addMall.png"
       },
       {
-        "pagePath": "pages/me/me",
+        "pagePath": "pages/me/index/index",
         "text": "我的",
         "iconPath": "/images/me.png",
         "selectedIconPath": "/images/selected-me.png"

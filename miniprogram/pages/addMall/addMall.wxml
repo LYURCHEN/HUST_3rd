@@ -71,6 +71,6 @@
   </view>
   <button hidden="{{!userInfo.openid}}" form-type='submit' class='sureRelease'>确认发布</button>
   <!-- <view > -->
-  <navigator class="navigator-text" wx:if="{{!userInfo.openid}}" open-type="switchTab" url="/pages/me/me">登录后才可以发布哦^^ </navigator>
+  <navigator class="navigator-text" wx:if="{{!userInfo.openid}}" open-type="switchTab" url="/pages/index/index">登录后才可以发布哦^^ </navigator>
   <!-- </view> -->
 </form>

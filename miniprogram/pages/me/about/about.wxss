@@ -1,1 +1,27 @@
 /* pages/me/about/about.wxss */
+
+.notice-title{
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 35rpx;
+}
+.notice-content{
+  line-height: 30rpx;
+}
+.about-item {
+	padding:5px 15px;
+}
+
+
+
+.about-item-title {
+	display: block;
+	font-size: 16px;
+	line-height: 30px;
+}
+
+.about-item-content {
+	margin-top: 5px;
+	display: block;
+	text-indent: 20px;
+}

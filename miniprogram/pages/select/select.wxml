@@ -1,0 +1,30 @@
+<!--pages/select/select.wxml-->
+<view class="container">
+  <view class='title'>
+    <view class='title_text'>
+      <text>选择类别  </text>
+      <picker name="category"  range="{{categoryList}}"  value="{{categoryInd}}" bindchange="getCategory">
+        <view class='roll_text'>{{categoryList[categoryInd]}}></view>
+      </picker>
+    </view>
+  </view>
+  <view wx:if="{{selectList.length==0}}">未找到商品</view>
+  <view wx:for="{{selectList}}" wx:key="{{item._id}}" id="{{item._id}}"  class="item-container">
+    <view bindtap="toDetail" class="item-container" id="{{item._id}}"> 
+      <image  class="image"  mode='aspectFit' src="{{item.bannerImage}}"></image>
+      <view class="content">
+        <view class="title">{{item.title}}</view>
+        <view class="tag"><text>{{item.category}}</text> </view>
+      </view>
+    </view>
+
+    <view class="action">
+      <view>
+      ￥{{item.price}}
+      </view>
+      <view class="cart" bindtap="cart">
+      +
+      </view>
+    </view>
+  </view>
+</view>

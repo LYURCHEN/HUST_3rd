@@ -1,2 +1,32 @@
 <!--pages/me/about/about.wxml-->
-<text>pages/me/about/about.wxml</text>
+
+<view class="about">
+  <view class="notice">
+    <text class="notice-title">交易须知</text>
+    <text class="notice-content">
+    尊敬的用户，您好！
+      请务必认真阅读《HUST好货交易平台服务相关协议》（以下简称协议）所规定的权利和限制。除非您接受本《协议》，否则您无权使用相关服务。您一旦登录、使用本产品，即表示您同意接受本《协议》。
+      一.真实性
+      二.安全性
+      三.平等性
+      四.免责声明
+    </text>
+  </view>
+
+	<view class="about-item">
+		<text class="about-item-title">关于项目</text>
+		<text class="about-item-content">微信小程序-为华中科技大学学生服务的闲置物品交易平台（项目持续更新中...）</text>
+	</view>
+
+	<view class="about-item">
+		<text class="about-item-title">源码地址</text>
+		<text class="about-item-content link">https://</text>
+		<text class="about-item-content link">https://</text>
+	</view>
+
+	<view class="about-item">
+		<text class="about-item-title">当前版本</text>
+		<text class="about-item-content ">1.1.1</text>
+	</view>
+
+</view>

@@ -24,6 +24,7 @@ page {
   padding-top: 10rpx;
   display: flex;
 }
+
 .roll_title{
   margin-left: 20rpx;
   width: 400rpx;

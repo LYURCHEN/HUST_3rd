@@ -16,12 +16,13 @@ App({
     }
     
     this.globalData = {
-      userInfo: null
+      userInfo: null,
+      isLogin: false
     }
 
     const userInfo = wx.getStorageSync("userInfo")
     if(userInfo){
-      this.globalData.userInfo = userInfo
+      this.globalData.userInfo = userInfo;
     }
   }
 })

@@ -145,6 +145,7 @@ Page({
          icon: 'success',
          duration: 2000
        })//将邮箱和已注册的信息发送的数据库的用户信息处
+       app.globalData.isLogin = true
      }
      else{
        wx.showToast({

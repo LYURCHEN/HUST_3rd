@@ -1,0 +1,17 @@
+/* pages/wxid/wxid.wxss */
+.wxid{
+  height: 30px;
+  font-size: 14px;
+  border-style: solid;
+  border-width: 3px;
+  border-color:  	rgb(255, 208, 0) ;
+  text-align: center;
+  line-height: 30px;
+  width: 95%;
+}
+.text{
+  font-weight: bold;
+  font-style:italic;
+  font-size: 40rpx;
+  flex: 2
+}

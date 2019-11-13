@@ -1,21 +1,40 @@
 <!--pages/me/collect/collect.wxml-->
-<view class="container">
-  <view class="list" wx:if='{{collectList.length}}'>
-    <view class="item" bindtap="openGoods" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:for="{{collectList}}" wx:key="{{item.id}}" data-index="{{index}}">
-      <image class="img" src="{{item.primaryPicUrl}}" mode='aspectFill'></image>
-      <view class="info">
-        <view class="name">{{item.name}}</view>
-        <view class="flex">
-          <view class="price">￥{{item.price}}</view>
-          <view class="tag" wx:if='{{!item.isSelling}}'>已出售</view>
-        </view>
+<!--header-->
+  <view class="header">我的收藏</view>
+  <view class="collectList" wx:if='{{!isempty}}'>
+    <!--保留区-->
+    <view class="space"></view>
+    <!--list item-->
+    <block wx:for="{{goodsList}}" wx:key="key">
+      <view class="goods">
+            <!--左侧图片-->
+            <view>
+                <image src="{{item.bannerImage}}" class="good-img"/>
+            </view>
+            <!--右侧说明部分-->
+            <view class="good-cont">
+                <!--文字说明-->
+                <view class="goods-navigator">
+                    <text class="good-name">{{item.title}}</text>
+                </view>
+                <!--种类说明-->
+                <view class="tag"><text>{{item.category}}</text> </view>
+                <!--价钱和删除图标-->
+                <view class="good-price">
+                    <text class="price">￥{{item.price}}</text>
+                    <view class="btn-box">
+                        <image id="{{item._id}}" src="/images/delete_4.png" bindtap="delGoods"/>
+                    </view>
+                </view>
+            </view>
       </view>
-    </view>
+    </block>
   </view>
+
 
   <view class="result-empty" wx:else>
     <image class="icon" src="https://i.postimg.cc/VLsTt8WK/image.png"></image>
     <text class="text">您还没有收藏宝贝</text>
   </view>
 
-</view>
+
