@@ -37,7 +37,8 @@ input{outline: none;border: none;list-style: none;width: auto;}
   font-display: flex;
   font-size: 25rpx;
 }
- .page_menolgn_1 .page_menolgn_7{width:748rpx;position: relative;height:731rpx;padding:0rpx;clear:both;margin-top:3rpx;margin-left:0rpx;float:left;background-color:#f2f4f2;background-image: url(http://wx.ymznkf.com/project/8489/云开发2//miniprogram/page_menolgn/images/page_menolgn_7_7.jpg);background-size:cover;text-align:left; border-radius:0rpx;font-size:22rpx; line-height:731rpx;}
+ .page_menolgn_1 .page_menolgn_7{width:748rpx;position: relative;height:731rpx;padding:0rpx;clear:both;margin-top:3rpx;margin-left:0rpx;float:left;background-color:#fff;background-image: url(http://wx.ymznkf.com/project/8489/云开发2//miniprogram/page_menolgn/images/page_menolgn_7_7.jpg);background-size:cover;text-align:left; border-radius:0rpx;font-size:22rpx; line-height:731rpx;}
+ 
  .page_menolgn_1 .page_menolgn_7 .page_menolgn_8{width:155rpx;height:211rpx;padding:0rpx;margin-top:58rpx;margin-left:120rpx;float:left;position: absolute;top: 0rpx;left: 0rpx;text-align:left; border-radius:0rpx;font-size:22rpx; line-height:211rpx;}
  .page_menolgn_1 .page_menolgn_7 .page_menolgn_11{width:155rpx;height:208rpx;padding:0rpx;margin-top:361rpx;margin-left:123rpx;float:left;position: absolute;top: 0rpx;left: 0rpx;text-align:left; border-radius:0rpx;font-size:22rpx; line-height:208rpx;}
  .page_menolgn_1 .page_menolgn_7 .page_menolgn_12{width:161rpx;height:208rpx;padding:0rpx;margin-top:361rpx;margin-left:461rpx;float:left;position: absolute;top: 0rpx;left: 0rpx;text-align:left; border-radius:0rpx;font-size:22rpx; line-height:208rpx;}

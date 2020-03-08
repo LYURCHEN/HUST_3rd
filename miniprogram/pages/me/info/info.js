@@ -3,60 +3,60 @@ const app = getApp()
 const db = wx.cloud.database()
 
 Page({
-  data:{
+  data: {
     userInfo: null,
-    wxID: 12345,
-    address: "沁苑",
-    user:null,
-    openid:null
+    wxID: null,
+    address: null,
+    user: null,
+    openid: null
   },
 
-  onLoad:function(){
+  onLoad: function () {
     var that = this;
     that.setData({
-      userInfo:app.globalData.userInfo,
+      userInfo: app.globalData.userInfo,
       openid: app.globalData.userInfo.openid
     })
     // var p= new Promise((resolve,reject)=>{
-    db.collection("user").doc(app.globalData.userInfo.openid).get().then(res=>{
+    db.collection("user").doc(app.globalData.userInfo.openid).get().then(res => {
       that.setData({
-        user:res.data
+        user: res.data
       })
       console.log(res.data)
-    }).catch(err=>{
-        console.log("未找到")
-      })  
+    }).catch(err => {
+      console.log("未找到")
+    })
     console.log(this.data.userInfo)
-    
+
   },
 
-  getWxID(e){
-    if(e.detail.value==""){
+  getWxID(e) {
+    if (e.detail.value == "") {
       wx.showToast({
         title: '请输入有效的微信号',
-        icon:"none",
+        icon: "none",
       })
-    }else{
+    } else {
       this.setData({
         wxID: e.detail.value
       })
-    } 
+    }
   },
 
-  getAdd(e){
+  getAdd(e) {
     if (e.detail.value == "") {
       wx.showToast({
         title: '请输入有效的地址',
         icon: "none",
       })
-    }else{
+    } else {
       this.setData({
         address: e.detail.value
       })
     }
   },
 
-  alter(){
+  alter() {
     var user = this.data.user;
     var wxID = this.data.wxID;
     var address = this.data.address;
@@ -66,49 +66,50 @@ Page({
     wx.showModal({
       title: '提示',
       content: '确认修改',
-      success: res=>{
-        if(res.confirm){
-          if(user){
-            if(wxID){
+      success: res => {
+        if (res.confirm) {
+          if (user) {
+            if (wxID) {
               db.collection("user").doc(openid).update({
-                data:{
+                data: {
                   wxID: wxID
                 }
               })
             }
-            if(address){
+            if (address) {
               db.collection("user").doc(openid).update({
-                data:{
-                  address:address
+                data: {
+                  address: address
                 }
               })
             }
-            db.collection("user").doc(openid).get().then(res=>{
+            db.collection("user").doc(openid).get().then(res => {
               console.log(res.data)
-            })            
-          }else{
+            })
+          } else {
             db.collection("user").add({
-              data:{
-                _id:openid,
-                wxID:wxID,
-                address:address
+              data: {
+                _id: openid,
+                wxID: wxID,
+                address: address,
+                favoriteList: []
               },
               // success: res=>{
-                
+
               // }
-            }).then(res=>{
+            }).then(res => {
               console.log(res.data)
 
             })
           }
-          
+
         }
       }
     })
 
   },
 
-  onShow: function(){
+  onShow: function () {
 
   }
 

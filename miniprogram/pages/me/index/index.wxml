@@ -14,16 +14,16 @@
 
     <view class="page_menolgn_7">
       <navigator url="/pages/me/posted/posted" class="a">
-      <image bindtap="page_menolgn_8_8_click" src="/images/post.jpg" style=" width:155rpx;height:211rpx;"  mode="scaleToFill" border="0"    class="page_menolgn_8"></image>
+      <image bindtap="page_menolgn_8_8_click" style=" width:155rpx;height:211rpx;"  mode="scaleToFill" border="0"    class="page_menolgn_8"></image>
       </navigator>
       <navigator url="/pages/me/about/about" class="a">
-      <image bindtap="page_menolgn_11_11_click" src="/images/notice.jpg" style=" width:155rpx;height:208rpx;"  mode="scaleToFill" border="0"    class="page_menolgn_11"></image>
+      <image bindtap="page_menolgn_11_11_click"  style=" width:155rpx;height:208rpx;"  mode="scaleToFill" border="0"    class="page_menolgn_11"></image>
       </navigator>
       <navigator url="/pages/me/advice/advice" class="a">
-      <image bindtap="page_menolgn_12_12_click" src="/images/advice.jpg" style=" width:161rpx;height:208rpx;"  mode="scaleToFill" border="0"    class="page_menolgn_12"></image>
+      <image bindtap="page_menolgn_12_12_click"  style=" width:161rpx;height:208rpx;"  mode="scaleToFill" border="0"    class="page_menolgn_12"></image>
       </navigator>
       <navigator url="/pages/me/collect/collect" class="a">
-      <image bindtap="page_menolgn_9_9_click" src="/images/like.jpg" style=" width:157rpx;height:211rpx;"  mode="scaleToFill" border="0"    class="page_menolgn_9"></image>
+      <image bindtap="page_menolgn_9_9_click"  style=" width:157rpx;height:211rpx;"  mode="scaleToFill" border="0"    class="page_menolgn_9"></image>
       </navigator>
     </view>
 

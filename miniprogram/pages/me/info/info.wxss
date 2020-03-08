@@ -1,0 +1,41 @@
+/* pages/info/info.wxss */
+/* pages/info_noauth/info_noauth.wxss */
+.title {
+  margin-top: 20rpx;
+  background-color: white;
+  width: 100%;
+  height: 80rpx;
+}
+ 
+.title_text {
+  margin-left: 20rpx;
+  width: 100%;
+  height: 50rpx;
+  padding-top: 10rpx;
+  display: flex;
+}
+
+.userinfo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 140rpx;
+}
+
+.login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.userinfo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 140rpx;
+}
+
+

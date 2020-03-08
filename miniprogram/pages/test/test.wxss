@@ -1,7 +1,0 @@
-/* pages/test/test.wxss */
-@import "/weui.wxss";
-
-.picker{
-  padding: 13px;
-  background-color: #FFFFFF;
-}
